@@ -1,7 +1,7 @@
 <template>
   <div class="clock">
-    <h1>{{ clock.date }}</h1>
-    <h1>{{ clock.time }}</h1>
+    <div>{{ clock.date }} {{ clock.week }}</div>
+    <div class="time">{{ clock.time }}</div>
   </div>
 </template>
 
@@ -11,7 +11,8 @@ import { onMounted, ref } from 'vue'
 var week = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
 const clock = ref({
   time: '',
-  date: ''
+  date: '',
+  week: ''
 })
 const setTime = () => {
   const now = new Date()
@@ -27,9 +28,8 @@ const setTime = () => {
     '-' +
     zeroPadding(now.getMonth() + 1, 2) +
     '-' +
-    zeroPadding(now.getDate(), 2) +
-    ' ' +
-    week[now.getDay()]
+    zeroPadding(now.getDate(), 2)
+  clock.value.week = week[now.getDay()]
 }
 
 function zeroPadding(num: number, digit: number) {
@@ -47,9 +47,15 @@ onMounted(() => {
 <style>
 @media (min-width: 1024px) {
   .clock {
+    font-size: 70px;
+    font-weight: 900;
     background-color: transparent;
     min-height: 100vh;
+    width: 100%;
     align-items: center;
+  }
+  .time {
+    font-size: 300px;
   }
 }
 </style>
