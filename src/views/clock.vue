@@ -45,7 +45,6 @@ onMounted(() => {
 </script>
 
 <style>
-@media (min-width: 1024px) {
   .clock {
     font-size: 70px;
     font-weight: 900;
@@ -55,7 +54,9 @@ onMounted(() => {
     align-items: center;
   }
   .time {
-    font-size: 300px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 160px;
+    font-weight: 900;
+    width: 100%;
   }
-}
 </style>
