@@ -45,18 +45,23 @@ onMounted(() => {
 </script>
 
 <style>
-  .clock {
-    font-size: 70px;
-    font-weight: 900;
-    background-color: transparent;
-    min-height: 100vh;
-    width: 100%;
-    align-items: center;
-  }
-  .time {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 160px;
-    font-weight: 900;
-    width: 100%;
-  }
+.clock {
+  color: aliceblue;
+  text-shadow:
+    1px 1px 2px red,
+    0 0 1em blue,
+    0 0 0.2em blue;
+  font-size: 70px;
+  font-weight: 900;
+  background-color: transparent;
+  min-height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+.time {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 160px;
+  font-weight: 900;
+  width: 100%;
+}
 </style>
